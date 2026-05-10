@@ -79,7 +79,7 @@ class Value:
                 for child in v._prev:
                     build_topo(child)
                 
-                topo.append(self)
+                topo.append(v)
         build_topo(self)
 
         self.grad = 1
